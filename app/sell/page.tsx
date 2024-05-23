@@ -21,8 +21,10 @@ import { redirect } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { useFormState } from "react-dom";
 import { toast } from "sonner";
+import { unstable_noStore as noStore } from "next/cache";
 
 const SellPage = () => {
+  noStore()
   const intialState: State = { message: "", status: undefined };
   const [state, formAction] = useFormState(SellProduct, intialState);
   const [json, setJson] = useState<null | JSONContent>(null);

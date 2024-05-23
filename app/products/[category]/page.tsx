@@ -4,6 +4,7 @@ import { unstable_noStore as noStore } from "next/cache";
 import prisma from "@/lib/db";
 import { ProductCard } from "@/components/ProductCard";
 
+
 async function getData(category: string) {
   let input;
 
